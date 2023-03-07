@@ -5,3 +5,8 @@ The game has three tutorial levels and three primary levels from left to right t
 After the survival levels, the virus is going to infect other hosts' cells and infection continues. The purpose of the game is to warn children about infectious diseases.
 
 https://www.construct.net/en/make-games/manuals/construct-3/tips-and-guides/importing-c2-projects
+
+![App Screenshot](https://github.com/ericvalijani/bio-game/blob/master/1.jpeg)
+![App Screenshot](https://github.com/ericvalijani/bio-game/blob/master/2.jpeg)
+![App Screenshot](https://github.com/ericvalijani/bio-game/blob/master/3.jpeg)
+![App Screenshot](https://github.com/ericvalijani/bio-game/blob/master/4.jpeg)

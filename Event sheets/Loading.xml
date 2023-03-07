@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Loading</name>
+    <events>
+        <event-block sid="595421392805423">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="272788427826488" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="910883118813041" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="645930856577224">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="821651106243742" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="469734746401688" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-15" name="Set visible" sid="868693248735465" type="Sprite19">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="419300144644417" type="Sprite20">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="33" name="Stop all" sid="979827710244251" type="Audio" />
+                <action id="-16" name="Wait" sid="102535607666341" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="0" name="Play" sid="104564392433125" type="Audio">
+                    <param id="0" name="Audio file">1</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="941412993338079" type="System">
+                    <param id="0" name="Layout">MainMenu</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

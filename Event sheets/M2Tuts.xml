@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>M2Tuts</name>
+    <events>
+        <event-block sid="891493867869989">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="602738623132411" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="723090675233001" type="Audio" />
+            </actions>
+            <sub-events>
+                <event-block sid="373363837690085">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="138252597980867" type="System">
+                            <param id="0" name="Variable">MTutsPage</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="747921256774224" type="page6">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="776833021581661">
+            <conditions>
+                <condition id="17" name="On tap object" sid="614171502605784" type="Touch">
+                    <param id="0" name="Object">RightArrow</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="387176616706737">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="602771826993132" type="System">
+                            <param id="0" name="Variable">MTutsPage</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="970858434310311" type="Audio">
+                            <param id="0" name="Audio file">page</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="527534509568821" type="RightArrow">
+                            <param id="0" name="Animation">&quot;clicked&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="274752265966166" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="693633422846416" type="System">
+                            <param id="0" name="Variable">MTutsPage</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="916734213537861" type="TPage">
+                            <param id="0" name="Text">MTutsPage</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="175444036696827" type="RightArrow">
+                            <param id="0" name="Animation">&quot;menu&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="798856200291605" type="page6">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="913856503541044" type="page7">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="683544507265285">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="106315648803597" type="System">
+                            <param id="0" name="Variable">MTutsPage</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="361664223560459" type="Audio">
+                            <param id="0" name="Audio file">page</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="345673616543486" type="RightArrow">
+                            <param id="0" name="Animation">&quot;clicked&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="689381301136288" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="489360314467606" type="System">
+                            <param id="0" name="Variable">MTutsPage</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="359922569175703" type="TPage">
+                            <param id="0" name="Text">MTutsPage</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="170810842300978" type="RightArrow">
+                            <param id="0" name="Animation">&quot;menu&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="456938559959447" type="page7">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="162245198590455" type="page8">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="929971363789239">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="728829827791613" type="System">
+                            <param id="0" name="Variable">MTutsPage</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="969571520614336" type="Audio">
+                            <param id="0" name="Audio file">page</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="929622792483461" type="RightArrow">
+                            <param id="0" name="Animation">&quot;clicked&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="899697026935684" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-21" name="Reset global variables" sid="540423331798987" type="System" />
+                        <action id="-2" name="Go to layout" sid="745832909080287" type="System">
+                            <param id="0" name="Layout">Game3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="889979400117058">
+            <conditions>
+                <condition id="17" name="On tap object" sid="326175825360743" type="Touch">
+                    <param id="0" name="Object">LeftArrow</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="988896721294279">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="366152363268471" type="System">
+                            <param id="0" name="Variable">MTutsPage</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="741479735669963" type="Audio">
+                            <param id="0" name="Audio file">1</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="242333614043315" type="System">
+                            <param id="0" name="Layout">MissionMenu</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="268093982916297">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="723046628089401" type="System">
+                            <param id="0" name="Variable">MTutsPage</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="924533568724970" type="Audio">
+                            <param id="0" name="Audio file">page</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="481548812821801" type="LeftArrow">
+                            <param id="0" name="Animation">&quot;clicked&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="594619909827246" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="498802117198118" type="System">
+                            <param id="0" name="Variable">MTutsPage</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="164873212765657" type="TPage">
+                            <param id="0" name="Text">MTutsPage</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="112127173658024" type="LeftArrow">
+                            <param id="0" name="Animation">&quot;menu&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="728608925642716" type="page7">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="977608196773883" type="page6">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="805786915943804">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="396997756586727" type="System">
+                            <param id="0" name="Variable">MTutsPage</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="237301243422873" type="Audio">
+                            <param id="0" name="Audio file">page</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="869908308691817" type="LeftArrow">
+                            <param id="0" name="Animation">&quot;clicked&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="570625606464226" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="124225610261033" type="System">
+                            <param id="0" name="Variable">MTutsPage</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="465186238585032" type="TPage">
+                            <param id="0" name="Text">MTutsPage</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="736696582020112" type="LeftArrow">
+                            <param id="0" name="Animation">&quot;menu&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="935962936092361" type="page8">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="165070521306222" type="page7">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

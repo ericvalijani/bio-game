@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="1">C3Mission</layout>
+        <layout order="7">Game3</layout>
+        <layout order="10">C1Mission</layout>
+        <layout order="12">C2Mission</layout>
+        <layout order="13">M1Tuts</layout>
+        <layout order="14">Game</layout>
+        <event-sheet order="0">Game3_Tutorial</event-sheet>
+        <event-sheet order="2">C1Mission</event-sheet>
+        <event-sheet order="3">C2Mission</event-sheet>
+        <event-sheet order="4">Game2_Tutorial</event-sheet>
+        <event-sheet active="1" order="5">C3Mission</event-sheet>
+        <event-sheet order="6">Game_Tutorial</event-sheet>
+        <event-sheet order="8">C2Tuts</event-sheet>
+        <event-sheet order="9">M1Tuts</event-sheet>
+        <event-sheet order="11">MTuts</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1">
+        <family expanded="1" name="GOMenu" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="1" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/Player/" />
+        <folder expanded="1" path="animation-folder/BotB/" />
+        <folder expanded="1" path="animation-folder/Promo/" />
+        <folder expanded="1" path="animation-folder/PlayButton/" />
+        <folder expanded="1" path="animation-folder/MenuButton/" />
+        <folder expanded="1" path="animation-folder/GameOverBlock/" />
+        <folder expanded="1" path="animation-folder/Reload/" />
+        <folder expanded="1" path="animation-folder/SoundButton/" />
+        <folder expanded="1" path="animation-folder/Touch1/" />
+        <folder expanded="1" path="animation-folder/SARMAD/" />
+        <folder expanded="1" path="animation-folder/Exit/" />
+        <folder expanded="1" path="animation-folder/TextGameOver/" />
+        <folder expanded="1" path="animation-folder/ScoreText/" />
+        <folder expanded="1" path="animation-folder/HighScoreText/" />
+        <folder expanded="1" path="animation-folder/HighScoreText2/" />
+        <folder expanded="1" path="animation-folder/progress1/" />
+        <folder expanded="1" path="animation-folder/progress2/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/Sprite5/" />
+        <folder expanded="1" path="animation-folder/AntiBody/" />
+        <folder expanded="1" path="animation-folder/Producer1/" />
+        <folder expanded="1" path="animation-folder/Live1/" />
+        <folder expanded="1" path="animation-folder/Live2/" />
+        <folder expanded="1" path="animation-folder/Live3/" />
+        <folder expanded="1" path="animation-folder/BG/" />
+        <folder expanded="1" path="animation-folder/Antibodies/" />
+        <folder expanded="1" path="animation-folder/BG3/" />
+        <folder expanded="1" path="animation-folder/Won/" />
+        <folder expanded="1" path="animation-folder/M1/" />
+        <folder expanded="1" path="animation-folder/M2/" />
+        <folder expanded="1" path="animation-folder/Sprite14/" />
+        <folder expanded="1" path="animation-folder/M3/" />
+        <folder expanded="1" path="animation-folder/Tutorials2/" />
+        <folder expanded="1" path="animation-folder/Tutorials3/" />
+        <folder expanded="1" path="animation-folder/Tutorials4/" />
+        <folder expanded="1" path="animation-folder/Tutorials5/" />
+        <folder expanded="1" path="animation-folder/charBehaviour/" />
+        <folder expanded="1" path="animation-folder/LeftArrow/" />
+        <folder expanded="1" path="animation-folder/RightArrow/" />
+        <folder expanded="1" path="animation-folder/Touch2/" />
+        <folder expanded="1" path="animation-folder/SitArrow/" />
+        <folder expanded="1" path="animation-folder/UpArrow/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Sprite19/" />
+        <folder expanded="1" path="animation-folder/Sprite20/" />
+        <folder expanded="1" path="animation-folder/Shield/" />
+        <folder expanded="1" path="animation-folder/Police/" />
+        <folder expanded="1" path="animation-folder/policeBehaviour/" />
+        <folder expanded="1" path="animation-folder/Sprite21/" />
+        <folder expanded="1" path="animation-folder/VirusShield/" />
+        <folder expanded="1" path="animation-folder/HeartScoreText/" />
+        <folder expanded="1" path="animation-folder/FlashArrow/" />
+        <folder expanded="1" path="animation-folder/Sprite7/" />
+        <folder expanded="1" path="animation-folder/MenuButton2/" />
+        <folder expanded="1" path="animation-folder/Sugar/" />
+        <folder expanded="1" path="animation-folder/Pill/" />
+        <folder expanded="1" path="animation-folder/pillbox/" />
+        <folder expanded="1" path="animation-folder/syringe/" />
+        <folder expanded="1" path="animation-folder/Sprite8/" />
+        <folder expanded="1" path="animation-folder/page2/" />
+        <folder expanded="1" path="animation-folder/page3/" />
+        <folder expanded="1" path="animation-folder/page5/" />
+        <folder expanded="1" path="animation-folder/page6/" />
+        <folder expanded="1" path="animation-folder/page7/" />
+        <folder expanded="1" path="animation-folder/page8/" />
+        <folder expanded="1" path="animation-folder/page9/" />
+        <folder expanded="1" path="animation-folder/page10/" />
+        <folder expanded="1" path="animation-folder/TutsBackground/" />
+        <folder expanded="1" path="animation-folder/Sprite9/" />
+        <folder expanded="1" path="animation-folder/page01/" />
+        <folder expanded="1" path="animation-folder/laser/" />
+        <folder expanded="1" path="animation-folder/laser2/" />
+        <folder expanded="1" path="animation-folder/missionLoad/" />
+        <folder expanded="1" path="animation-folder/missionLoad2/" />
+        <folder expanded="1" path="animation-folder/AntiBody2/" />
+        <folder expanded="1" path="animation-folder/ScoreText2/" />
+    </folders-expanded>
+</c2uistate>

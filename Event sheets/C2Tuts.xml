@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>C2Tuts</name>
+    <events>
+        <event-block sid="791102772332935">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="363218359648392" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="389181024170824" type="Audio" />
+            </actions>
+            <sub-events>
+                <event-block sid="693732296955957">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="341787056008299" type="System">
+                            <param id="0" name="Variable">MTutsPage</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="898711101190721" type="page9">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="384298816561913">
+            <conditions>
+                <condition id="17" name="On tap object" sid="278370265528172" type="Touch">
+                    <param id="0" name="Object">RightArrow</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="519584165972779" type="Audio">
+                    <param id="0" name="Audio file">page</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="761873742898101" type="RightArrow">
+                    <param id="0" name="Animation">&quot;clicked&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="466957701359607" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="541673388701324" type="System" />
+                <action id="-2" name="Go to layout" sid="277416346313170" type="System">
+                    <param id="0" name="Layout">C2Mission</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="624751886991418">
+            <conditions>
+                <condition id="17" name="On tap object" sid="150017475352683" type="Touch">
+                    <param id="0" name="Object">LeftArrow</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="183488619366551" type="Audio">
+                    <param id="0" name="Audio file">1</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="967368553355697" type="System">
+                    <param id="0" name="Layout">MissionMenu</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

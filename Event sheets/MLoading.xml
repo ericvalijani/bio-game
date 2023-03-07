@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MLoading</name>
+    <events>
+        <event-block sid="641712461731218">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="235840991902622" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="945103093416185" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="464411333299353" type="System">
+                    <param id="0" name="Layout">MTuts</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

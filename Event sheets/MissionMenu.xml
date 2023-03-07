@@ -1,0 +1,577 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MissionMenu</name>
+    <events>
+        <event-block sid="160211125253921">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="929737871107242" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Play" sid="433165066693659" type="Video" />
+                <action id="2" name="Set looping" sid="364902507421619" type="Video">
+                    <param id="0" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="366266775895919">
+            <conditions>
+                <condition id="17" name="On tap object" sid="620511001244819" type="Touch">
+                    <param id="0" name="Object">Exit</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="317902278159676" type="Exit">
+                    <param id="0" name="Animation">&quot;clicked&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="801197458189043" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="845962263852494" type="System">
+                    <param id="0" name="Layout">MainMenu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="677771618603600">
+            <conditions>
+                <condition id="17" name="On tap object" sid="530291327578332" type="Touch">
+                    <param id="0" name="Object">Tutorials5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="467013757074167" type="Tutorials5">
+                    <param id="0" name="Animation">&quot;clicked&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="842006130444045" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="242871577633028">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="889331305452434" type="System">
+                            <param id="0" name="Variable">TutsMission</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="582492955354898" type="System" />
+                        <action id="-2" name="Go to layout" sid="228626085781908" type="System">
+                            <param id="0" name="Layout">MLoading</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="156582072483172">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="645924185528738" type="System">
+                            <param id="0" name="Variable">TutsMission</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="794774270525950" type="System" />
+                        <action id="-2" name="Go to layout" sid="704891406729548" type="System">
+                            <param id="0" name="Layout">M1Loading</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="122577723857024">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="806479924692641" type="System">
+                            <param id="0" name="Variable">TutsMission</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="554169327086324" type="System" />
+                        <action id="-2" name="Go to layout" sid="488389517866877" type="System">
+                            <param id="0" name="Layout">M2Loading</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="603917092102691">
+            <conditions>
+                <condition id="17" name="On tap object" sid="548147170776916" type="Touch">
+                    <param id="0" name="Object">Tutorials2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="840076533510791">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="488924010032173" type="Tutorials2">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="316858666357631" type="System" />
+                        <action id="4" name="Set animation" sid="845141207871801" type="Tutorials2">
+                            <param id="0" name="Animation">&quot;clicked&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="870071058259437" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="182057067927020" type="System">
+                            <param id="0" name="Layout">C1Loading</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="814617557850774">
+            <conditions>
+                <condition id="17" name="On tap object" sid="412540198728564" type="Touch">
+                    <param id="0" name="Object">Tutorials3</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="138471676912319">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="410602440689160" type="Tutorials3">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="193437342653468" type="System" />
+                        <action id="4" name="Set animation" sid="201223941465882" type="Tutorials3">
+                            <param id="0" name="Animation">&quot;clicked&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="438221167594511" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="407277968483245" type="System">
+                            <param id="0" name="Layout">C2Loading</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="421765080926815">
+            <conditions>
+                <condition id="17" name="On tap object" sid="359844686354847" type="Touch">
+                    <param id="0" name="Object">Tutorials4</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="410774853051224">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="974405886651502" type="Tutorials4">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="626765420455420" type="System" />
+                        <action id="4" name="Set animation" sid="957111355114693" type="Tutorials4">
+                            <param id="0" name="Animation">&quot;clicked&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="930732754138488" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="870243158600781" type="System">
+                            <param id="0" name="Layout">C3Loading</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="306836335197564">
+            <conditions>
+                <condition id="17" name="On tap object" sid="832986104355516" type="Touch">
+                    <param id="0" name="Object">SoundButton</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="435491576890626" type="SoundButton">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="8" name="Set silent" sid="799588682270264" type="Audio">
+                    <param id="0" name="Mode">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="938945398395845" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="5" name="Set frame" sid="628850322864793" type="SoundButton">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="882413925293044">
+            <conditions>
+                <condition id="17" name="On tap object" sid="464102021533555" type="Touch">
+                    <param id="0" name="Object">SoundButton</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="190774342013444" type="SoundButton">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="8" name="Set silent" sid="608454295182343" type="Audio">
+                    <param id="0" name="Mode">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="191071936309357" type="SoundButton">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="830367161799509">
+            <conditions>
+                <condition id="3" name="Is silent" sid="446796992117754" type="Audio" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="498099399247192" type="SoundButton">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="475020285964807">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="137338476633911" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Check item exists" sid="190842209908116" type="LocalStorage">
+                    <param id="0" name="Key">&quot;BIO_HIGHSCORE&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="308629547778357" type="LocalStorage">
+                    <param id="0" name="Key">&quot;IS_PLAYED_TRAINING&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="734756932504614" type="LocalStorage">
+                    <param id="0" name="Key">&quot;TUTS_MISSION&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="472869035121002" type="LocalStorage">
+                    <param id="0" name="Key">&quot;CAREER_MISSION&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="345052253835289">
+            <conditions>
+                <condition id="10" name="On item missing" sid="491619089771103" type="LocalStorage">
+                    <param id="0" name="Key">&quot;TUTS_MISSION&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set item" sid="693199845330290" type="LocalStorage">
+                    <param id="0" name="Key">&quot;TUTS_MISSION&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="592262748502761">
+            <conditions>
+                <condition id="9" name="On item exists" sid="537091760903245" type="LocalStorage">
+                    <param id="0" name="Key">&quot;TUTS_MISSION&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="616987247462941" type="LocalStorage">
+                    <param id="0" name="Key">&quot;TUTS_MISSION&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="910115270859921">
+            <conditions>
+                <condition id="1" name="On item get" sid="687082382495846" type="LocalStorage">
+                    <param id="0" name="Key">&quot;TUTS_MISSION&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="616064443816100" type="System">
+                    <param id="0" name="Variable">TutsMission</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+                <action id="0" name="Set item" sid="281110037187559" type="LocalStorage">
+                    <param id="0" name="Key">&quot;TUTS_MISSION&quot;</param>
+                    <param id="1" name="Value">TutsMission</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="367211097129620">
+            <conditions>
+                <condition id="10" name="On item missing" sid="811815070757360" type="LocalStorage">
+                    <param id="0" name="Key">&quot;BIO_HIGHSCORE&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set item" sid="674248445974765" type="LocalStorage">
+                    <param id="0" name="Key">&quot;BIO_HIGHSCORE&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="842538403081195">
+            <conditions>
+                <condition id="9" name="On item exists" sid="884373216483791" type="LocalStorage">
+                    <param id="0" name="Key">&quot;BIO_HIGHSCORE&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="658780150760528" type="LocalStorage">
+                    <param id="0" name="Key">&quot;BIO_HIGHSCORE&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="971578095558299">
+            <conditions>
+                <condition id="1" name="On item get" sid="329595607549285" type="LocalStorage">
+                    <param id="0" name="Key">&quot;BIO_HIGHSCORE&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="614880247376039" type="System">
+                    <param id="0" name="Variable">HighScore</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+                <action id="0" name="Set item" sid="369855709436135" type="LocalStorage">
+                    <param id="0" name="Key">&quot;BIO_HIGHSCORE&quot;</param>
+                    <param id="1" name="Value">HighScore</param>
+                </action>
+                <action id="0" name="Set text" sid="225941263337363" type="TextHighScorePlus">
+                    <param id="0" name="Text">HighScore</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="199064532771652">
+            <conditions>
+                <condition id="10" name="On item missing" sid="742714899842631" type="LocalStorage">
+                    <param id="0" name="Key">&quot;IS_PLAYED_TRAINING&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set item" sid="536100548881852" type="LocalStorage">
+                    <param id="0" name="Key">&quot;IS_PLAYED_TRAINING&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="783794597937557">
+            <conditions>
+                <condition id="9" name="On item exists" sid="795430316262885" type="LocalStorage">
+                    <param id="0" name="Key">&quot;IS_PLAYED_TRAINING&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="193459190511684" type="LocalStorage">
+                    <param id="0" name="Key">&quot;IS_PLAYED_TRAINING&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="699251928998853">
+            <conditions>
+                <condition id="1" name="On item get" sid="213031480997812" type="LocalStorage">
+                    <param id="0" name="Key">&quot;IS_PLAYED_TRAINING&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="159219713140193" type="System">
+                    <param id="0" name="Variable">isPlayedTraining</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+                <action id="0" name="Set item" sid="520106310452913" type="LocalStorage">
+                    <param id="0" name="Key">&quot;IS_PLAYED_TRAINING&quot;</param>
+                    <param id="1" name="Value">isPlayedTraining</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="158566889257802">
+            <conditions>
+                <condition id="10" name="On item missing" sid="348308110288179" type="LocalStorage">
+                    <param id="0" name="Key">&quot;CAREER_MISSION&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set item" sid="771347715727597" type="LocalStorage">
+                    <param id="0" name="Key">&quot;CAREER_MISSION&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="607329485870549">
+            <conditions>
+                <condition id="9" name="On item exists" sid="654419435774447" type="LocalStorage">
+                    <param id="0" name="Key">&quot;CAREER_MISSION&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="912348317264833" type="LocalStorage">
+                    <param id="0" name="Key">&quot;CAREER_MISSION&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="380820067401315">
+            <conditions>
+                <condition id="1" name="On item get" sid="517810738127915" type="LocalStorage">
+                    <param id="0" name="Key">&quot;CAREER_MISSION&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="792795642570243" type="System">
+                    <param id="0" name="Variable">CareerMission</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+                <action id="0" name="Set item" sid="619805254610450" type="LocalStorage">
+                    <param id="0" name="Key">&quot;CAREER_MISSION&quot;</param>
+                    <param id="1" name="Value">CareerMission</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="737455953836882">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="787830686688996" type="System">
+                            <param id="0" name="Variable">isPlayedTraining</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="431768999202023" type="Tutorials2">
+                            <param id="0" name="Animation">&quot;disabled&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="738127301248274" type="Tutorials3">
+                            <param id="0" name="Animation">&quot;disabled&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="673609631856589" type="Tutorials4">
+                            <param id="0" name="Animation">&quot;disabled&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="492637242645071" type="FlashArrow">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="564323540834522" type="Tutorials5">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="977955091623049">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="593588050637125" type="System">
+                            <param id="0" name="Variable">isPlayedTraining</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="347763932843521" type="System">
+                            <param id="0" name="Variable">CareerMission</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="580487131055662" type="Tutorials2">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="540969648826936" type="Tutorials3">
+                            <param id="0" name="Animation">&quot;disabled&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="988987769946162" type="Tutorials4">
+                            <param id="0" name="Animation">&quot;disabled&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="468687329296294" type="FlashArrow">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="288251860323953" type="Tutorials5">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="357591063400853">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="304666032398665" type="System">
+                            <param id="0" name="Variable">isPlayedTraining</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="893978034838170" type="System">
+                            <param id="0" name="Variable">CareerMission</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="555389374281294" type="Tutorials2">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="943651740404709" type="Tutorials3">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="132365383709540" type="Tutorials4">
+                            <param id="0" name="Animation">&quot;disabled&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="932857056381744" type="FlashArrow">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="137376058271428" type="Tutorials5">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="545464934933210">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="904709709483878" type="System">
+                            <param id="0" name="Variable">isPlayedTraining</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="927187287071675" type="System">
+                            <param id="0" name="Variable">CareerMission</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="756822964319385" type="Tutorials2">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="370353804272360" type="Tutorials3">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="477413573913151" type="Tutorials4">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="152993432573071" type="FlashArrow">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="188561306709483" type="Tutorials5">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="217982501802461">
+            <conditions>
+                <condition id="17" name="On tap object" sid="440753650242293" type="Touch">
+                    <param id="0" name="Object">SARMAD</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="8" name="Open URL in new window" sid="658022540107016" type="Browser">
+                    <param id="0" name="URL">&quot;http://www.sarmadtech.ir&quot;</param>
+                    <param id="1" name="Tag">&quot;SarmadTech&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

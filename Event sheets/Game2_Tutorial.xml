@@ -1,0 +1,2678 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Game2_Tutorial</name>
+    <events>
+        <event-group description="" sid="139561443103991" title="PLAYER LOGIC2">
+            <sub-events>
+                <comment>Each step move the character to the right</comment>
+                <event-block sid="799992754434331">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="961352444865360" type="System" />
+                        <condition id="-14" name="Compare variable" sid="469010641716433" type="System">
+                            <param id="0" name="Variable">Start</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Scroll to X" sid="749378138276635" type="System">
+                            <param id="0" name="X">charBehaviour.X  + 400</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="873869153980660" type="charBehaviour">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Increases background every 3 seconds</comment>
+                <event-block disabled="1" sid="820581710205571">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="564431014232086" type="System">
+                            <param id="0" name="Interval (seconds)">9</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="910643280435566" type="System">
+                            <param id="0" name="Variable">Start</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="795266121682065" type="Function">
+                            <param id="0" name="Name">choose(&quot;BG2&quot;,&quot;BG4&quot;,&quot;BG5&quot;)</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="329685297234080">
+                    <conditions>
+                        <condition id="0" name="On function" sid="379316161893316" type="Function">
+                            <param id="0" name="Name">&quot;BG2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block disabled="1" sid="669661733809135">
+                    <conditions>
+                        <condition id="0" name="On function" sid="206341965848893" type="Function">
+                            <param id="0" name="Name">&quot;BG4&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block disabled="1" sid="308156048474756">
+                    <conditions>
+                        <condition id="0" name="On function" sid="509615136442667" type="Function">
+                            <param id="0" name="Name">&quot;BG5&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="495880142141949">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="909881764018805" type="System">
+                            <param id="0" name="Interval (seconds)">3</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="963432123794344" type="System">
+                            <param id="0" name="Variable">Start</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="116688880440917" type="System">
+                            <param id="0" name="Object to create">BG3</param>
+                            <param id="1" name="Layer">&quot;Background3&quot;</param>
+                            <param id="2" name="X">LastBottomBlockPosX</param>
+                            <param id="3" name="Y">random(150,600)</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="224599676618613" type="BG3">
+                            <param id="0" name="Animation">choose(&quot;Animation2&quot;,&quot;Default&quot;)</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="558973394178101">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="530682180956294" type="System">
+                            <param id="0" name="Interval (seconds)">4</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="238459283954575" type="System">
+                            <param id="0" name="Variable">Start</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="873927842843863" type="BG1">
+                            <param id="0" name="Width">BG1.Width + 2048</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="445100750361753">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="296120474517489" type="System">
+                            <param id="0" name="Interval (seconds)">1.5</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="411282242653472" type="System">
+                            <param id="0" name="Variable">ishurt</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="586240505520318" type="System">
+                            <param id="0" name="Variable">Start</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="932847256386347" type="Function">
+                            <param id="0" name="Name">&quot;BotBlocks&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="697591500310975">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="650100531416348" type="System">
+                            <param id="0" name="Interval (seconds)">1.5</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="852484526979491" type="System">
+                            <param id="0" name="Variable">Start</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="674059769300792" type="Function">
+                            <param id="0" name="Name">&quot;TopBlocks&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="492856063869350">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="346607369562910" type="System">
+                            <param id="0" name="Interval (seconds)">random(2, 3)</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="382929356875016" type="System">
+                            <param id="0" name="Variable">Start</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="567662368654060" type="Function">
+                            <param id="0" name="Name">choose(&quot;BotBlocksG&quot;,&quot;BotBlocksG3&quot;)</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="247884635823535">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="695117939866336" type="System">
+                            <param id="0" name="Interval (seconds)">random(4, 5)</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="558295268846635" type="System">
+                            <param id="0" name="Variable">Start</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="527227083304743" type="Function">
+                            <param id="0" name="Name">choose(&quot;BotBlocksG2&quot;,&quot;BotBlocksG4&quot;)</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="608959314188247">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="165921697423603" type="System">
+                            <param id="0" name="Interval (seconds)">2.5</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="760352713308247" type="System">
+                            <param id="0" name="Variable">ishurt</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="979204505712606" type="System">
+                            <param id="0" name="Variable">Start</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="704647925970334" type="System">
+                            <param id="0" name="Variable">newposition</param>
+                            <param id="1" name="Value">LastBottomBlockPosX</param>
+                        </action>
+                        <action id="0" name="Call function" sid="778451480905265" type="Function">
+                            <param id="0" name="Name">&quot;VerticalMove&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>We set the maximum speed at the beginning of the level</comment>
+                <event-block sid="232712351794231">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="810876075642773" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="855517508399192" type="System">
+                            <param id="0" name="Variable">anim</param>
+                            <param id="1" name="Value">20</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="703620415645717" type="System">
+                            <param id="0" name="Variable">Start</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="311111434650639" type="charBehaviour">
+                            <param id="0" name="Max Speed">SCROLL_SPEED</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="173500127431664" type="Player">
+                            <param id="0" name="Object">charBehaviour</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="525820467687830" type="System">
+                            <param id="0" name="Seconds">0.01</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="538675963797788" type="System">
+                            <param id="0" name="Variable">attached</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="338496589033933">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="283617554500536" type="Touch">
+                            <param id="0" name="Object">Touch1</param>
+                        </condition>
+                        <condition behavior="Platform" disabled="1" id="2" name="Is on floor" sid="995000557828532" type="charBehaviour" />
+                        <condition id="-14" name="Compare variable" sid="162637706456811" type="System">
+                            <param id="0" name="Variable">isdoublejumped</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="581096566977409">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="849840241610674" type="System">
+                                    <param id="0" name="Variable">PAUSED</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="318399674638531">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="140720402200558" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X</param>
+                                        </condition>
+                                        <condition id="-1" name="Compare X" sid="115348705176374" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X-300</param>
+                                        </condition>
+                                        <condition id="-1" name="Compare X" sid="696203816028651" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X+300</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="318153064681226" type="charBehaviour">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="706155499357167" type="charBehaviour">
+                                            <param id="0" name="Vector Y">pulo</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="633217228376800" type="System">
+                                            <param id="0" name="Variable">isdoublejumped</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="123762522663554">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="911884535832454" type="Touch">
+                            <param id="0" name="Object">Touch1</param>
+                        </condition>
+                        <condition behavior="Platform" disabled="1" id="2" inverted="1" name="Is on floor" sid="912466927827088" type="charBehaviour" />
+                        <condition id="-14" name="Compare variable" sid="583537820301198" type="System">
+                            <param id="0" name="Variable">isdoublejumped</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="214660383561317" type="charBehaviour">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">860</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="370469232618635">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="644112910781230" type="System">
+                                    <param id="0" name="Variable">PAUSED</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="273653730710564">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="339257145700297" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X</param>
+                                        </condition>
+                                        <condition id="-1" name="Compare X" sid="856407694253469" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X-300</param>
+                                        </condition>
+                                        <condition id="-1" name="Compare X" sid="726083676394864" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X+300</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="538756580135842" type="charBehaviour">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="303259346322495" type="charBehaviour">
+                                            <param id="0" name="Vector Y">pulo2</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="279597471150949" type="System">
+                                            <param id="0" name="Variable">isdoublejumped</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="899708327585315">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="733095211753164" type="Touch">
+                            <param id="0" name="Object">Touch1</param>
+                        </condition>
+                        <condition behavior="Platform" disabled="1" id="2" inverted="1" name="Is on floor" sid="419761587092073" type="charBehaviour" />
+                        <condition id="-14" name="Compare variable" sid="135127433267960" type="System">
+                            <param id="0" name="Variable">isdoublejumped</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="945172562822601">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="324922422643988" type="System">
+                                    <param id="0" name="Variable">PAUSED</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="569289803122047">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="399463529347129" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X</param>
+                                        </condition>
+                                        <condition id="-1" name="Compare X" sid="221740716411988" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X-300</param>
+                                        </condition>
+                                        <condition id="-1" name="Compare X" sid="944001536054952" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X+300</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="145112455990593" type="charBehaviour">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="829714497767595" type="charBehaviour">
+                                            <param id="0" name="Vector Y">pulo2</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="373371182139893" type="System">
+                                            <param id="0" name="Variable">isdoublejumped</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="386492096016852">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="792263088644404" type="Touch">
+                            <param id="0" name="Object">Touch2</param>
+                        </condition>
+                        <condition behavior="Platform" disabled="1" id="2" name="Is on floor" sid="119694498107339" type="charBehaviour" />
+                        <condition id="-14" name="Compare variable" sid="361065997118100" type="System">
+                            <param id="0" name="Variable">isdoublejumped</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="143550306180178">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="272732615744477" type="System">
+                                    <param id="0" name="Variable">PAUSED</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="674286947128515">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="904069878522506" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X</param>
+                                        </condition>
+                                        <condition id="-1" name="Compare X" sid="512249866562143" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X-300</param>
+                                        </condition>
+                                        <condition id="-1" name="Compare X" sid="622635483556102" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X+300</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="161394741558279" type="charBehaviour">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="199201244552858" type="charBehaviour">
+                                            <param id="0" name="Vector Y">pulo</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="710893677287401" type="System">
+                                            <param id="0" name="Variable">isdoublejumped</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="617269886648070">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="859900624035542" type="Touch">
+                            <param id="0" name="Object">Touch2</param>
+                        </condition>
+                        <condition behavior="Platform" disabled="1" id="2" inverted="1" name="Is on floor" sid="163606514719169" type="charBehaviour" />
+                        <condition id="-14" name="Compare variable" sid="585374706970720" type="System">
+                            <param id="0" name="Variable">isdoublejumped</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="395723934413729" type="charBehaviour">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">860</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="641718953496748">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="247051710394712" type="System">
+                                    <param id="0" name="Variable">PAUSED</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="784159440480389">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="102915934035983" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X</param>
+                                        </condition>
+                                        <condition id="-1" name="Compare X" sid="800074564376993" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X-300</param>
+                                        </condition>
+                                        <condition id="-1" name="Compare X" sid="457680604522297" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X+300</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="178979978567337" type="charBehaviour">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="755336199170992" type="charBehaviour">
+                                            <param id="0" name="Vector Y">pulo2</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="738008417490449" type="System">
+                                            <param id="0" name="Variable">isdoublejumped</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="536594937377653">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="850851332308215" type="Touch">
+                            <param id="0" name="Object">Touch2</param>
+                        </condition>
+                        <condition behavior="Platform" disabled="1" id="2" inverted="1" name="Is on floor" sid="455775162460797" type="charBehaviour" />
+                        <condition id="-14" name="Compare variable" sid="601922395485698" type="System">
+                            <param id="0" name="Variable">isdoublejumped</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="167706104540895">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="253267654931014" type="System">
+                                    <param id="0" name="Variable">PAUSED</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="505906825080670">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="445439009927019" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X</param>
+                                        </condition>
+                                        <condition id="-1" name="Compare X" sid="153476781668684" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X-300</param>
+                                        </condition>
+                                        <condition id="-1" name="Compare X" sid="183123618765309" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X+300</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="782739259257944" type="charBehaviour">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="451567376078461" type="charBehaviour">
+                                            <param id="0" name="Vector Y">pulo2</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="968964632051772" type="System">
+                                            <param id="0" name="Variable">isdoublejumped</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="697555623753859">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="233460928947395" type="Touch">
+                            <param id="0" name="Object">UpArrow</param>
+                        </condition>
+                        <condition behavior="Platform" disabled="1" id="2" name="Is on floor" sid="716398316303911" type="charBehaviour" />
+                        <condition id="-14" name="Compare variable" sid="494831730602563" type="System">
+                            <param id="0" name="Variable">isdoublejumped</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="507311421209977">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="140559299489860" type="System">
+                                    <param id="0" name="Variable">PAUSED</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="244189880398762">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="737978849085226" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X</param>
+                                        </condition>
+                                        <condition id="-1" name="Compare X" sid="116459460053782" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X-300</param>
+                                        </condition>
+                                        <condition id="-1" name="Compare X" sid="445843602351933" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X+300</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="516548707609775" type="charBehaviour">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="915026716111579" type="charBehaviour">
+                                            <param id="0" name="Vector Y">pulo</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="456394757280839" type="System">
+                                            <param id="0" name="Variable">isdoublejumped</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="511876818668673">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="378973906826313" type="Touch">
+                            <param id="0" name="Object">UpArrow</param>
+                        </condition>
+                        <condition behavior="Platform" disabled="1" id="2" inverted="1" name="Is on floor" sid="942080331795088" type="charBehaviour" />
+                        <condition id="-14" name="Compare variable" sid="838672183124128" type="System">
+                            <param id="0" name="Variable">isdoublejumped</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="353185117644237" type="charBehaviour">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">860</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="469565324623840">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="442446257838368" type="System">
+                                    <param id="0" name="Variable">PAUSED</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="830844290193300">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="436218145714538" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X</param>
+                                        </condition>
+                                        <condition id="-1" name="Compare X" sid="306735954289930" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X-300</param>
+                                        </condition>
+                                        <condition id="-1" name="Compare X" sid="233750566611656" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X+300</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="255550111373763" type="charBehaviour">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="798392724744395" type="charBehaviour">
+                                            <param id="0" name="Vector Y">pulo2</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="597671595832811" type="System">
+                                            <param id="0" name="Variable">isdoublejumped</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="966574157764465">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="587383485610431" type="Touch">
+                            <param id="0" name="Object">UpArrow</param>
+                        </condition>
+                        <condition behavior="Platform" disabled="1" id="2" inverted="1" name="Is on floor" sid="952690566902579" type="charBehaviour" />
+                        <condition id="-14" name="Compare variable" sid="799001861059312" type="System">
+                            <param id="0" name="Variable">isdoublejumped</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="182172468433540">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="301403557381296" type="System">
+                                    <param id="0" name="Variable">PAUSED</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="347951766749636">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="485853747689196" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X</param>
+                                        </condition>
+                                        <condition id="-1" name="Compare X" sid="863342312037924" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X-300</param>
+                                        </condition>
+                                        <condition id="-1" name="Compare X" sid="834042795683489" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">charBehaviour.X+300</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="412048121794344" type="charBehaviour">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="738500148233731" type="charBehaviour">
+                                            <param id="0" name="Vector Y">pulo2</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="523890230301845" type="System">
+                                            <param id="0" name="Variable">isdoublejumped</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="404842419010048">
+                    <conditions>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="630277686325979" type="charBehaviour" />
+                        <condition disabled="1" id="-2" name="Compare Y" sid="387675223987635" type="charBehaviour">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">860</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="185134888956268">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="859974460371125" type="System">
+                                    <param id="0" name="Variable">PAUSED</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="386317707290708" type="System">
+                                    <param id="0" name="Variable">isdoublejumped</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="279408124195097">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="634718639822224" type="System">
+                            <param id="0" name="Variable">isdoublejumped</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="869328751337504" type="charBehaviour">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">750</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="139563897935295">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="587668089643243" type="System">
+                                    <param id="0" name="Variable">PAUSED</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="553902625463436" type="charBehaviour">
+                                    <param id="0" name="Vector Y">pulo</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>If on floor - play move animation</comment>
+                <event-block sid="606835262226440">
+                    <conditions>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="896224573409014" type="charBehaviour" />
+                        <condition id="-14" name="Compare variable" sid="327829165783124" type="System">
+                            <param id="0" name="Variable">sitting</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="500215803475443">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="928976989774144" type="System">
+                                    <param id="0" name="Variable">PAUSED</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="197488297027817" type="Player">
+                                    <param id="0" name="Animation">&quot;GreenMove&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="356087255279121">
+                    <conditions>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="105042545740578" type="charBehaviour" />
+                        <condition id="-14" name="Compare variable" sid="358817154757988" type="System">
+                            <param id="0" name="Variable">sitting</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="916291756006271">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="448902462995981" type="System">
+                                    <param id="0" name="Variable">PAUSED</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="953452424656803" type="Player">
+                                    <param id="0" name="Animation">&quot;GreenJump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="670168674635052">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="313456303491864" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-9" name="Set value" sid="718035533702729" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">Score + 1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="995280635038513" type="TextScorePlus">
+                            <param id="0" name="Text">Score</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="811216638559574">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="835549126089014" type="Player">
+                            <param id="0" name="Object">Sugar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="735630966598172" type="Sugar">
+                            <param id="0" name="Object">Particles</param>
+                            <param id="1" name="Layer">&quot;PLAYER&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="495877271765646" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">Score + 5</param>
+                        </action>
+                        <action id="0" name="Play" sid="196163364381411" type="Audio">
+                            <param id="0" name="Audio file">candy</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="614638483665427" type="Sugar" />
+                        <action id="-10" name="Add to" sid="691036715306030" type="System">
+                            <param id="0" name="Variable">anim</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="552507857791291" type="progress2">
+                            <param id="0" name="Animation">&quot;D&quot; &amp; anim</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="137150587292097" type="System">
+                            <param id="0" name="Variable">IsEat</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="116804926705465" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="242818264673819" type="System">
+                            <param id="0" name="Variable">IsEat</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="528209443008791">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="623340010886721" type="Player">
+                            <param id="0" name="Object">Antibodies</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="821245927592442" type="System">
+                            <param id="0" name="Variable">hasShield</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="12" name="Vibrate" sid="253878746655707" type="Browser">
+                            <param id="0" name="Pattern">&quot;200,100,200&quot;</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Set value" sid="779424052276389" type="System">
+                            <param id="0" name="Variable">GameOver</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action disabled="1" id="4" name="Set animation" sid="780268281417405" type="Live3">
+                            <param id="0" name="Animation">&quot;dead&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action disabled="1" id="4" name="Set animation" sid="444477649052722" type="Live2">
+                            <param id="0" name="Animation">&quot;dead&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action disabled="1" id="4" name="Set animation" sid="194052283390629" type="Live1">
+                            <param id="0" name="Animation">&quot;dead&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Flash" disabled="1" id="1" name="Stop flashing" sid="822138896412134" type="Live1" />
+                        <action behavior="Flash" disabled="1" id="1" name="Stop flashing" sid="441647789755563" type="Live2" />
+                        <action behavior="Flash" disabled="1" id="1" name="Stop flashing" sid="430141038884762" type="Live3" />
+                        <action id="0" name="Play" sid="502652095401508" type="Audio">
+                            <param id="0" name="Audio file">collision</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="887472763810653" type="Antibodies">
+                            <param id="0" name="Object">Particles4</param>
+                            <param id="1" name="Layer">&quot;PLAYER&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="876394580355260">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="306508271741703" type="System">
+                                    <param id="0" name="Variable">Lives</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Flash" id="0" name="Flash" sid="639305822725612" type="Player">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">2</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="762131103295966" type="Live3">
+                                    <param id="0" name="Animation">&quot;dead&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="469194729688873" type="Live2">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">2</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="212442039035007" type="Live1">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="657544352415830" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="852537849650093" type="System">
+                                    <param id="0" name="Variable">Lives</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="638767293803451">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="135235524724771" type="System">
+                                    <param id="0" name="Variable">Lives</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Flash" id="0" name="Flash" sid="717934562007821" type="Player">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">2</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="372329418898689" type="Live1">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="414304777477452" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="671129711104361" type="Live2">
+                                    <param id="0" name="Animation">&quot;dead&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="115860229981228" type="System">
+                                    <param id="0" name="Variable">Lives</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="388318369280152">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="831402419973082" type="System">
+                                    <param id="0" name="Variable">Lives</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="543240157517588" type="System">
+                                    <param id="0" name="Variable">Lives</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="245815786451116" type="System">
+                                    <param id="0" name="Variable">Lives</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="945253374154381" type="Live2">
+                                    <param id="0" name="Animation">&quot;dead&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="786002601490150" type="System">
+                                    <param id="0" name="Variable">Lives</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="775833057486539" type="Live1">
+                                    <param id="0" name="Animation">&quot;dead&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="692566186743087" type="System">
+                                    <param id="0" name="Variable">GameOver</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="609810654414156">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="943277553835370" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="939265880119061">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="132660772038265" type="System">
+                                    <param id="0" name="Variable">Lives</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="687310600451211" type="Live2">
+                                    <param id="0" name="Animation">&quot;dead&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="199766765681218" title="BLOCKS GENERATE2">
+            <sub-events>
+                <comment>Creating Blocks bot</comment>
+                <event-block sid="952002852872945">
+                    <conditions>
+                        <condition id="0" name="On function" sid="661298985347629" type="Function">
+                            <param id="0" name="Name">&quot;BotBlocks&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="230467853223494" type="System">
+                            <param id="0" name="Variable">LastBottomBlockPosX</param>
+                            <param id="1" name="Value">LastBottomBlockPosX + 679</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="738020782295237" type="System">
+                            <param id="0" name="Object to create">BotB</param>
+                            <param id="1" name="Layer">&quot;Blocks&quot;</param>
+                            <param id="2" name="X">LastBottomBlockPosX</param>
+                            <param id="3" name="Y">1024</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="199525692330869">
+                    <conditions>
+                        <condition id="0" name="On function" sid="677734900661458" type="Function">
+                            <param id="0" name="Name">&quot;TopBlocks&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="977815414406490" type="System">
+                            <param id="0" name="Variable">LastTopBlockPosX</param>
+                            <param id="1" name="Value">LastTopBlockPosX + 679</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="587974221154217">
+                    <conditions>
+                        <condition id="0" name="On function" sid="929461213009382" type="Function">
+                            <param id="0" name="Name">&quot;VerticalMove&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="161984866235635" type="System">
+                            <param id="0" name="Object to create">Antibodies</param>
+                            <param id="1" name="Layer">&quot;PLAYER&quot;</param>
+                            <param id="2" name="X">newposition</param>
+                            <param id="3" name="Y">random(400,600)</param>
+                        </action>
+                        <action disabled="1" id="4" name="Set animation" sid="964989261359678" type="Antibodies">
+                            <param id="0" name="Animation">choose(&quot;one&quot;,&quot;two&quot;)</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="467102021257496">
+                    <conditions>
+                        <condition id="0" name="On function" sid="395626518678536" type="Function">
+                            <param id="0" name="Name">&quot;BotBlocksG&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="726179330456841" type="System">
+                            <param id="0" name="Variable">newposition</param>
+                            <param id="1" name="Value">LastBottomBlockPosX</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="951630853065997" type="System">
+                            <param id="0" name="Object to create">Sugar</param>
+                            <param id="1" name="Layer">&quot;PLAYER&quot;</param>
+                            <param id="2" name="X">random(newposition-400,newposition+400)</param>
+                            <param id="3" name="Y">random(256, 352)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="533614642087514">
+                    <conditions>
+                        <condition id="0" name="On function" sid="427346036046792" type="Function">
+                            <param id="0" name="Name">&quot;BotBlocksG2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="478360896864184" type="System">
+                            <param id="0" name="Variable">newposition</param>
+                            <param id="1" name="Value">LastBottomBlockPosX</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="466814374526511" type="System">
+                            <param id="0" name="Object to create">Sugar</param>
+                            <param id="1" name="Layer">&quot;PLAYER&quot;</param>
+                            <param id="2" name="X">random(newposition-350,newposition+350)</param>
+                            <param id="3" name="Y">random(256, 352)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="988072879232703">
+                    <conditions>
+                        <condition id="0" name="On function" sid="705302263331303" type="Function">
+                            <param id="0" name="Name">&quot;BotBlocksG3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="719058346826387" type="System">
+                            <param id="0" name="Variable">newposition</param>
+                            <param id="1" name="Value">LastBottomBlockPosX</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="166372854285724" type="System">
+                            <param id="0" name="Object to create">Sugar</param>
+                            <param id="1" name="Layer">&quot;PLAYER&quot;</param>
+                            <param id="2" name="X">random(newposition-400,newposition+400)</param>
+                            <param id="3" name="Y">random(256, 500)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="684204687832591">
+                    <conditions>
+                        <condition id="0" name="On function" sid="348324099555207" type="Function">
+                            <param id="0" name="Name">&quot;BotBlocksG4&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="904603323330539" type="System">
+                            <param id="0" name="Variable">newposition</param>
+                            <param id="1" name="Value">LastBottomBlockPosX</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="880983128319518" type="System">
+                            <param id="0" name="Object to create">Sugar</param>
+                            <param id="1" name="Layer">&quot;PLAYER&quot;</param>
+                            <param id="2" name="X">random(newposition-350,newposition+350)</param>
+                            <param id="3" name="Y">random(256, 700)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Remove unnecessary blocks and free memory</comment>
+                <event-block sid="383647298813330">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="502781744434008" type="BotB">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">charBehaviour.X - 2000</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="437875869274603" type="BotB" />
+                    </actions>
+                </event-block>
+                <event-block sid="609214629258475">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="940557085614517" type="Sugar">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">charBehaviour.X-800</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="892096648443664" type="Sugar" />
+                    </actions>
+                </event-block>
+                <event-block sid="447632782268271">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="549517556439696" type="Antibodies">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">charBehaviour.X-800</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="750088636844876" type="Antibodies" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="139380311921566" title="GAME OVER MENU2">
+            <sub-events>
+                <event-block sid="150594080191673">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="837333664998879" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin2" id="0" name="Pin to object" sid="333719468404049" type="GOMenu">
+                            <param id="0" name="Pin to">GameOverBlock</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="436889370527807" type="TextHighScorePlus">
+                            <param id="0" name="Pin to">GameOverBlock</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="695830636806891" type="ScoreText">
+                            <param id="0" name="Pin to">GameOverBlock</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="524093365249261" type="HighScoreText">
+                            <param id="0" name="Pin to">GameOverBlock</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="564810960198510" type="TextGameOver">
+                            <param id="0" name="Pin to">GameOverBlock</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="743336958311271" type="Won">
+                            <param id="0" name="Pin to">GameOverBlock</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="765863923203980" type="PlayButton">
+                            <param id="0" name="Pin to">GameOverBlock</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="190203804048217">
+                            <conditions>
+                                <condition id="-16" name="Is on layer" sid="463389044989693" type="MenuButton">
+                                    <param id="0" name="Layer">&quot;UI2&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="322920729883587" type="MenuButton">
+                                    <param id="0" name="Pin to">GameOverBlock</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="455643029351529">
+                            <conditions>
+                                <condition id="-16" name="Is on layer" sid="821101616864904" type="TextScorePlus">
+                                    <param id="0" name="Layer">&quot;UI2&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="247305580030775" type="TextScorePlus">
+                                    <param id="0" name="Pin to">GameOverBlock</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="847402278683824">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="254985222378527" type="System">
+                            <param id="0" name="Variable">GameOver</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="853212758806003" type="Touch1" />
+                        <action id="-9" name="Destroy" sid="290934761575281" type="Touch2" />
+                        <action id="-9" name="Destroy" sid="183812552502452" type="LeftArrow" />
+                        <action id="-9" name="Destroy" sid="693254364170844" type="RightArrow" />
+                        <action id="-9" name="Destroy" sid="232308582659948" type="UpArrow" />
+                        <action id="-9" name="Destroy" sid="228436324308894" type="SitArrow" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="702388522683387">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="421314741379724" type="System">
+                                    <param id="0" name="Variable">isWin</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="792861393365144" type="PlayButton" />
+                                <action id="4" name="Set animation" sid="121215497838704" type="Player">
+                                    <param id="0" name="Animation">&quot;GreenDestroy&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="469782504540574" type="Player">
+                                    <param id="0" name="Frame number">3</param>
+                                </action>
+                                <action disabled="1" id="-9" name="Destroy" sid="251747586862792" type="BG1" />
+                                <action id="4" name="Set animation" sid="653536835051013" type="BG">
+                                    <param id="0" name="Animation">&quot;Dark&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="377795691906332" type="BG">
+                                    <param id="0" name="Frame number">7</param>
+                                </action>
+                                <action id="2" name="Stop" sid="874133803534185" type="BG" />
+                                <action id="-9" name="Destroy" sid="258557497578524" type="Antibodies" />
+                                <action id="-9" name="Destroy" sid="585213050201392" type="Sugar" />
+                                <action id="-16" name="Wait" sid="668482062465021" type="System">
+                                    <param id="0" name="Seconds">1.5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="117878487973741">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="922222139237042" type="System">
+                                    <param id="0" name="Variable">isWin</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="678141495333830" type="Reload" />
+                                <action id="4" name="Set animation" sid="458195073658920" type="Player">
+                                    <param id="0" name="Animation">&quot;Won&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action disabled="1" id="-9" name="Destroy" sid="514352114910904" type="BG1" />
+                                <action id="4" name="Set animation" sid="534102696105320" type="BG">
+                                    <param id="0" name="Animation">&quot;Dark&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="886608880819389" type="BG">
+                                    <param id="0" name="Frame number">7</param>
+                                </action>
+                                <action id="2" name="Stop" sid="220487487800673" type="BG" />
+                                <action id="-9" name="Destroy" sid="576778753910550" type="Antibodies" />
+                                <action id="-9" name="Destroy" sid="557588453568678" type="Sugar" />
+                                <action id="-16" name="Wait" sid="295915442126270" type="System">
+                                    <param id="0" name="Seconds">1.5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="987507869192223">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="780887905364756" type="System">
+                            <param id="0" name="Variable">GameOver</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="647141122196375" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="228235680182687" type="System">
+                            <param id="0" name="Variable">Start</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-24" name="Stop loop" sid="552066726405424" type="System" />
+                        <action id="33" name="Stop all" sid="706118192742918" type="Audio" />
+                        <action id="-3" name="Set position" sid="606677654046411" type="Sprite">
+                            <param id="0" name="X">scrollx</param>
+                            <param id="1" name="Y">scrolly</param>
+                        </action>
+                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="105402658379933" type="Sprite">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="701833367398554" type="Sprite">
+                            <param id="0" name="Magnitude">30</param>
+                            <param id="1" name="Duration">0.4</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="788449240820094">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="647016371971567" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">HighScore</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-9" name="Set value" sid="817671219373787" type="System">
+                                    <param id="0" name="Variable">HighScore</param>
+                                    <param id="1" name="Value">HighScore+Score</param>
+                                </action>
+                                <action id="0" name="Set text" sid="714998753137262" type="TextHighScorePlus">
+                                    <param id="0" name="Text">HighScore</param>
+                                </action>
+                                <action id="0" name="Set item" sid="797575444452227" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;BIO_HIGHSCORE&quot;</param>
+                                    <param id="1" name="Value">HighScore</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="931646884009418">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="182767548030636" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">HighScore</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-9" name="Set value" sid="990874314847446" type="System">
+                                    <param id="0" name="Variable">HighScore</param>
+                                    <param id="1" name="Value">HighScore+Score</param>
+                                </action>
+                                <action id="0" name="Set text" sid="407082406238964" type="TextHighScorePlus">
+                                    <param id="0" name="Text">Score</param>
+                                </action>
+                                <action id="0" name="Set item" sid="960504470352476" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;BIO_HIGHSCORE&quot;</param>
+                                    <param id="1" name="Value">Score</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="618773107136865">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="219325108858911" type="System">
+                                    <param id="0" name="Variable">isWin</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="834370351572797" type="Won">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="466798984578422" type="TextGameOver">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="103342278779927" type="PlayButton">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="149178462095354" type="Reload">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="773967622006360" type="Audio">
+                                    <param id="0" name="Audio file">death_sound</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="730100597461737" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="293397620763293" type="GameOverBlock">
+                                    <param id="0" name="Y">486</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="359675982077975" type="GameOverBlock">
+                                    <param id="0" name="X">950</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="707932554257741">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="606796818873319" type="System">
+                                    <param id="0" name="Variable">isWin</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="367352991963794" type="TextGameOver">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="177408778562092" type="Won">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="169653434565691" type="PlayButton">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="765675608952865" type="Reload">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="439055733756494" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="0" name="Play" sid="494763706659817" type="Audio">
+                                    <param id="0" name="Audio file">wingame</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="392582627021824" type="GameOverBlock">
+                                    <param id="0" name="Y">486</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="442929263666091" type="GameOverBlock">
+                                    <param id="0" name="X">950</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="784838860960508" type="System">
+                                    <param id="0" name="Variable">TutsMission</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="0" name="Set item" sid="316944994068876" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;TUTS_MISSION&quot;</param>
+                                    <param id="1" name="Value">TutsMission</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="866801071611320">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="710780775712392" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="403845909244724" type="System">
+                                    <param id="0" name="Variable">HighScore</param>
+                                    <param id="1" name="Value">HighScore+Score</param>
+                                </action>
+                                <action id="0" name="Set item" sid="960502276585572" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;BIO_HIGHSCORE&quot;</param>
+                                    <param id="1" name="Value">HighScore</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="951262713613886" title="HIGH SCORE3">
+            <sub-events>
+                <event-block sid="752221048553916">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="510673325892895" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Check item exists" sid="933431948325706" type="LocalStorage">
+                            <param id="0" name="Key">&quot;BIO_HIGHSCORE&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="689072272294027">
+                    <conditions>
+                        <condition id="10" name="On item missing" sid="444444240642214" type="LocalStorage">
+                            <param id="0" name="Key">&quot;BIO_HIGHSCORE&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set item" sid="422254966253483" type="LocalStorage">
+                            <param id="0" name="Key">&quot;BIO_HIGHSCORE&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="528178702904748">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="372600796726745" type="LocalStorage">
+                            <param id="0" name="Key">&quot;BIO_HIGHSCORE&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="380850564501503" type="LocalStorage">
+                            <param id="0" name="Key">&quot;BIO_HIGHSCORE&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="888786253403358">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="887464411678238" type="LocalStorage">
+                            <param id="0" name="Key">&quot;BIO_HIGHSCORE&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="723415569441822" type="System">
+                            <param id="0" name="Variable">HighScore</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                        <action id="0" name="Set text" sid="502826599823520" type="TextHighScorePlus">
+                            <param id="0" name="Text">HighScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="959856468494545" title="MENU2">
+            <sub-events>
+                <event-group description="" sid="401989349182413" title="SOUND CONTROL2">
+                    <sub-events>
+                        <event-block sid="224253252804748">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="293507848065498" type="Touch">
+                                    <param id="0" name="Object">SoundButton</param>
+                                </condition>
+                                <condition id="3" name="Compare frame" sid="863928958333915" type="SoundButton">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="8" name="Set silent" sid="129009756054167" type="Audio">
+                                    <param id="0" name="Mode">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="434018149437526" type="System">
+                                    <param id="0" name="Seconds">0.3</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="111638517306917" type="SoundButton">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="845939317621206">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="965312863712119" type="Touch">
+                                    <param id="0" name="Object">SoundButton</param>
+                                </condition>
+                                <condition id="3" name="Compare frame" sid="787612225827295" type="SoundButton">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="8" name="Set silent" sid="200230089918973" type="Audio">
+                                    <param id="0" name="Mode">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="145720054381114" type="SoundButton">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="281956943496916">
+                            <conditions>
+                                <condition id="3" name="Is silent" sid="629534833991168" type="Audio" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="511064497186083" type="SoundButton">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="332534722666235">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="332638122533239" type="Touch">
+                            <param id="0" name="Object">Reload</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="612371236494130" type="System" />
+                        <action id="-26" name="Restart layout" sid="569268084517513" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="698548427882160">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="141996675217475" type="Touch">
+                            <param id="0" name="Object">PlayButton</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="384614554912654" type="System">
+                            <param id="0" name="Variable">PAUSED</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="255450617876090" type="System" />
+                        <action id="-2" name="Go to layout" sid="270901574457877" type="System">
+                            <param id="0" name="Layout">M2Loading</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="413872820362381">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="806492202130835" type="Touch">
+                            <param id="0" name="Object">PlayButton</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="390239032238608" type="System">
+                            <param id="0" name="Variable">PAUSED</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="894957944765929" type="charBehaviour">
+                            <param id="0" name="X">charBehaviour.X</param>
+                            <param id="1" name="Y">playerLastPos</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="603662574401910" type="System">
+                            <param id="0" name="Variable">playerLastPos</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="156825313388948" type="RightArrow">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="117975532970792" type="SitArrow">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="839654719311761" type="UpArrow">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="251594694783252" type="LeftArrow">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="698572644944597" type="PlayButton">
+                            <param id="0" name="Object">Reload</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="239896091516981" type="PlayButton">
+                            <param id="0" name="Pin to">GameOverBlock</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="874861564519340" type="SoundButton">
+                            <param id="0" name="X">Reload.X-278</param>
+                            <param id="1" name="Y">Reload.Y</param>
+                        </action>
+                        <action behavior="Pin2" id="0" name="Pin to object" sid="228125923931180" type="SoundButton">
+                            <param id="0" name="Pin to">GameOverBlock</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="690612285068304" type="Antibodies">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="657058808386946" type="Sugar">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="598652656228091" type="MenuButton2" />
+                        <action id="-3" name="Create object" sid="634327546116201" type="System">
+                            <param id="0" name="Object to create">MenuButton</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="X">1780</param>
+                            <param id="3" name="Y">128</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="561361174300813" type="System">
+                            <param id="0" name="Variable">PAUSED</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="384242414408090" type="System">
+                            <param id="0" name="Variable">Start</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="3" name="Start" sid="987884945691058" type="Player">
+                            <param id="0" name="From">0</param>
+                        </action>
+                        <action id="3" name="Start" sid="265520773248885" type="Sugar">
+                            <param id="0" name="From">0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="674090010937951" type="SoundButton">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="819775563038370">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="366379450667447" type="Touch">
+                            <param id="0" name="Object">MenuButton</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="342831447758447" type="System">
+                            <param id="0" name="Variable">PAUSED</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="380213355489432" type="System">
+                            <param id="0" name="Variable">GameOver</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="452873965147267" type="System">
+                            <param id="0" name="Variable">playerLastPos</param>
+                            <param id="1" name="Value">Player.Y</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="798935919245043" type="RightArrow">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="536446367339131" type="SitArrow">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="594755002304720" type="UpArrow">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="495940783694162" type="LeftArrow">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="115282789406667" type="Antibodies">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="978007976204657" type="Sugar">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Pin" id="1" name="Unpin" sid="950564338957667" type="PlayButton" />
+                        <action id="-15" name="Set visible" sid="501528300211115" type="PlayButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="496082367588617" type="PlayButton">
+                            <param id="0" name="Object">Sprite</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="2" name="Stop" sid="364376373827982" type="Player" />
+                        <action id="2" name="Stop" sid="259657293591576" type="Sugar" />
+                        <action id="-9" name="Set value" sid="501386580299579" type="System">
+                            <param id="0" name="Variable">PAUSED</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="346868424340677" type="System">
+                            <param id="0" name="Variable">Start</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-24" name="Stop loop" sid="748568764517133" type="System" />
+                        <action id="-9" name="Destroy" sid="800073630377582" type="MenuButton" />
+                        <action id="-16" name="Wait" sid="268589328651465" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="577089361612279" type="System">
+                            <param id="0" name="Object to create">MenuButton2</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="X">1780</param>
+                            <param id="3" name="Y">128</param>
+                        </action>
+                        <action behavior="Pin2" id="1" name="Unpin" sid="184291142187034" type="SoundButton" />
+                        <action id="-15" name="Set visible" sid="429542265592917" type="SoundButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="242407252462802" type="SoundButton">
+                            <param id="0" name="X">MenuButton2.X</param>
+                            <param id="1" name="Y">MenuButton2.Y+200</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="323553229636032" type="SoundButton">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="667918537789004">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="431235778412517" type="Touch">
+                            <param id="0" name="Object">MenuButton</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="916714466682590" type="System">
+                            <param id="0" name="Variable">PAUSED</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="471271577351580" type="System">
+                            <param id="0" name="Variable">GameOver</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="573179498042955">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="676484659317824" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">HighScore</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-9" name="Set value" sid="348871689925265" type="System">
+                                    <param id="0" name="Variable">HighScore</param>
+                                    <param id="1" name="Value">HighScore+Score</param>
+                                </action>
+                                <action id="0" name="Set text" sid="360450155461245" type="TextHighScorePlus">
+                                    <param id="0" name="Text">HighScore</param>
+                                </action>
+                                <action id="0" name="Set item" sid="265659762096608" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;BIO_HIGHSCORE&quot;</param>
+                                    <param id="1" name="Value">HighScore</param>
+                                </action>
+                                <action id="33" name="Stop all" sid="171540802391207" type="Audio" />
+                                <action id="0" name="Play" sid="287030408549858" type="Audio">
+                                    <param id="0" name="Audio file">1</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="827099604126403" type="System">
+                                    <param id="0" name="Layout">MissionMenu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="648450853456944">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="793054065233915" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">HighScore</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-9" name="Set value" sid="435540520019978" type="System">
+                                    <param id="0" name="Variable">HighScore</param>
+                                    <param id="1" name="Value">HighScore+Score</param>
+                                </action>
+                                <action id="0" name="Set text" sid="689192981341430" type="TextHighScorePlus">
+                                    <param id="0" name="Text">Score</param>
+                                </action>
+                                <action id="0" name="Set item" sid="347369954759575" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;BIO_HIGHSCORE&quot;</param>
+                                    <param id="1" name="Value">Score</param>
+                                </action>
+                                <action id="33" name="Stop all" sid="730470934070980" type="Audio" />
+                                <action id="0" name="Play" sid="552240343922064" type="Audio">
+                                    <param id="0" name="Audio file">1</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="401158034721573" type="System">
+                                    <param id="0" name="Layout">MissionMenu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="729389825550135">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="299155186842368" type="Touch">
+                            <param id="0" name="Object">MenuButton2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="407117547151980" type="System">
+                            <param id="0" name="Variable">PAUSED</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="848253336103971">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="883025012390780" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">HighScore</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-9" name="Set value" sid="776755955141793" type="System">
+                                    <param id="0" name="Variable">HighScore</param>
+                                    <param id="1" name="Value">HighScore+Score</param>
+                                </action>
+                                <action id="0" name="Set text" sid="217841231533105" type="TextHighScorePlus">
+                                    <param id="0" name="Text">HighScore</param>
+                                </action>
+                                <action id="0" name="Set item" sid="919104552865338" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;BIO_HIGHSCORE&quot;</param>
+                                    <param id="1" name="Value">HighScore</param>
+                                </action>
+                                <action id="33" name="Stop all" sid="873606826121563" type="Audio" />
+                                <action id="0" name="Play" sid="602846080803336" type="Audio">
+                                    <param id="0" name="Audio file">1</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="602016830767546" type="System">
+                                    <param id="0" name="Layout">MissionMenu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="887951352488747">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="335851004952557" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">HighScore</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-9" name="Set value" sid="753446996408916" type="System">
+                                    <param id="0" name="Variable">HighScore</param>
+                                    <param id="1" name="Value">HighScore+Score</param>
+                                </action>
+                                <action id="0" name="Set text" sid="304351104152128" type="TextHighScorePlus">
+                                    <param id="0" name="Text">Score</param>
+                                </action>
+                                <action id="0" name="Set item" sid="490793944131538" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;BIO_HIGHSCORE&quot;</param>
+                                    <param id="1" name="Value">Score</param>
+                                </action>
+                                <action id="33" name="Stop all" sid="486829677044395" type="Audio" />
+                                <action id="0" name="Play" sid="285396703066718" type="Audio">
+                                    <param id="0" name="Audio file">1</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="732940250028684" type="System">
+                                    <param id="0" name="Layout">MissionMenu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="721425652717618">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="620932576896813" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="579638821217873" type="Audio" />
+                <action id="0" name="Play" sid="436175153861870" type="Audio">
+                    <param id="0" name="Audio file">5</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">5</param>
+                    <param id="1" name="Tag (optional)">&quot;GMusic&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="958385815584700">
+            <conditions>
+                <condition id="3" name="On touched object" sid="819929786067573" type="Touch">
+                    <param id="0" name="Object">SitArrow</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="977341323548941" type="System">
+                    <param id="0" name="Variable">PAUSED</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="623225615099019" type="SitArrow">
+                    <param id="0" name="Animation">&quot;clicked&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="536795171195973" type="SitArrow">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="2" name="Stop" sid="220737495570080" type="Player" />
+                <action id="4" name="Set animation" sid="368155687993157" type="Player">
+                    <param id="0" name="Animation">&quot;GreenSit&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="912329222634861" type="System">
+                    <param id="0" name="Variable">sitting</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="829519012432550" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="5" name="Set frame" sid="373019512505683" type="Player">
+                    <param id="0" name="Frame number">4</param>
+                </action>
+                <action id="2" name="Stop" sid="136600418704691" type="Player" />
+                <action id="-16" name="Wait" sid="436283476641887" type="System">
+                    <param id="0" name="Seconds">0.7</param>
+                </action>
+                <action id="3" name="Start" sid="790689242604468" type="Player">
+                    <param id="0" name="From">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="700962843455526" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="4" name="Set animation" sid="439620696486741" type="SitArrow">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="213505332079070" type="SitArrow">
+                    <param id="0" name="Opacity">50</param>
+                </action>
+                <action id="-9" name="Set value" sid="611067394755383" type="System">
+                    <param id="0" name="Variable">sitting</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="114656614442695">
+            <conditions>
+                <condition id="3" name="On touched object" sid="633096162265679" type="Touch">
+                    <param id="0" name="Object">LeftArrow</param>
+                </condition>
+                <condition disabled="1" id="-1" name="Compare X" sid="498844419916224" type="Player">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">charBehaviour.X</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="913332371848875" type="System">
+                    <param id="0" name="Variable">attached</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="576966165944858" type="charBehaviour" />
+                <condition id="-14" name="Compare variable" sid="310413922019443" type="System">
+                    <param id="0" name="Variable">sitting</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="579570938842520" type="System">
+                    <param id="0" name="Variable">PAUSED</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="617414892688062" type="LeftArrow">
+                    <param id="0" name="Animation">&quot;clicked&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="164577803219913" type="LeftArrow">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-9" name="Set value" sid="720185896420042" type="System">
+                    <param id="0" name="Variable">attached</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="399165257678561" type="Player">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="665380894514544" type="System">
+                    <param id="0" name="Seconds">0.7</param>
+                </action>
+                <action id="4" name="Set animation" sid="718427944918587" type="LeftArrow">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="578155294995976" type="LeftArrow">
+                    <param id="0" name="Opacity">50</param>
+                </action>
+                <action id="-9" name="Set value" sid="148556068993463" type="System">
+                    <param id="0" name="Variable">attached</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="105311845654408">
+            <conditions>
+                <condition id="3" name="On touched object" sid="191017797017007" type="Touch">
+                    <param id="0" name="Object">LeftArrow</param>
+                </condition>
+                <condition disabled="1" id="-1" name="Compare X" sid="827783625750586" type="Player">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">charBehaviour.X</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="713029748532322" type="System">
+                    <param id="0" name="Variable">attached</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="373199677243260" type="charBehaviour" />
+                <condition id="-14" name="Compare variable" sid="157986461234753" type="System">
+                    <param id="0" name="Variable">sitting</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="881777345838940" type="System">
+                    <param id="0" name="Variable">PAUSED</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="268984634958440" type="System">
+                    <param id="0" name="Variable">attached</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="279210023150073" type="LeftArrow">
+                    <param id="0" name="Animation">&quot;clicked&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="829894868229613" type="LeftArrow">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="108828700153920" type="Player">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="606512224128239" type="System">
+                    <param id="0" name="Seconds">0.7</param>
+                </action>
+                <action id="4" name="Set animation" sid="218660414728310" type="LeftArrow">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="108189553547762" type="LeftArrow">
+                    <param id="0" name="Opacity">50</param>
+                </action>
+                <action id="-9" name="Set value" sid="745342627043791" type="System">
+                    <param id="0" name="Variable">attached</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="722978167349296">
+            <conditions>
+                <condition id="3" name="On touched object" sid="589467695648496" type="Touch">
+                    <param id="0" name="Object">RightArrow</param>
+                </condition>
+                <condition disabled="1" id="-1" name="Compare X" sid="219798190348703" type="Player">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">charBehaviour.X</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="512760174336183" type="System">
+                    <param id="0" name="Variable">attached</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="671402880259641" type="charBehaviour" />
+                <condition id="-14" name="Compare variable" sid="800983847441861" type="System">
+                    <param id="0" name="Variable">sitting</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="167148615968651" type="System">
+                    <param id="0" name="Variable">PAUSED</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="982795872739028" type="System">
+                    <param id="0" name="Variable">attached</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="943492802593404" type="RightArrow">
+                    <param id="0" name="Animation">&quot;clicked&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="110770235642034" type="RightArrow">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="715149101378092" type="Player">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="613749847061195" type="Player">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="155919235894304" type="Player">
+                    <param id="0" name="Speed">800</param>
+                </action>
+                <action behavior="Bullet" id="1" name="Set acceleration" sid="877960297196966" type="Player">
+                    <param id="0" name="Acceleration">200</param>
+                </action>
+                <action id="-16" name="Wait" sid="318212145330730" type="System">
+                    <param id="0" name="Seconds">0.65</param>
+                </action>
+                <action id="4" name="Set animation" sid="303723288786805" type="RightArrow">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="570703204271706" type="RightArrow">
+                    <param id="0" name="Opacity">50</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="430827627086020" type="Player">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="736711062138385" type="System">
+                    <param id="0" name="Variable">attached</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="552270397103472">
+            <conditions>
+                <condition id="3" name="On touched object" sid="531307891225847" type="Touch">
+                    <param id="0" name="Object">RightArrow</param>
+                </condition>
+                <condition disabled="1" id="-1" name="Compare X" sid="848630304127227" type="Player">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">charBehaviour.X</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="893805794687081" type="System">
+                    <param id="0" name="Variable">attached</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="445035856700513" type="charBehaviour" />
+                <condition id="-14" name="Compare variable" sid="772830464751393" type="System">
+                    <param id="0" name="Variable">sitting</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="241566650892518" type="System">
+                    <param id="0" name="Variable">PAUSED</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="877687286906537" type="System">
+                    <param id="0" name="Variable">attached</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="832218394866572" type="RightArrow">
+                    <param id="0" name="Animation">&quot;clicked&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="873549870457489" type="RightArrow">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="557063855703603" type="Player">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="251724853410819" type="Player">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="333794406933433" type="Player">
+                    <param id="0" name="Speed">800</param>
+                </action>
+                <action behavior="Bullet" id="1" name="Set acceleration" sid="368408616382432" type="Player">
+                    <param id="0" name="Acceleration">200</param>
+                </action>
+                <action id="-16" name="Wait" sid="276970247441010" type="System">
+                    <param id="0" name="Seconds">0.65</param>
+                </action>
+                <action id="4" name="Set animation" sid="338673885602135" type="RightArrow">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="165883667027689" type="RightArrow">
+                    <param id="0" name="Opacity">50</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="116728214376444" type="Player">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="555060750199346" type="System">
+                    <param id="0" name="Variable">attached</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="469267667731715">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="689726949347408" type="System" />
+                <condition id="-14" name="Compare variable" sid="557552189211391" type="System">
+                    <param id="0" name="Variable">attached</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="836761607226189" type="System">
+                    <param id="0" name="Variable">sitting</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="508117002612322" type="System">
+                    <param id="0" name="Variable">PAUSED</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="812454640831537" type="Player">
+                    <param id="0" name="Object">charBehaviour</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="188907032593877">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="960614396249779" type="System" />
+                <condition id="-14" name="Compare variable" sid="424702576820471" type="System">
+                    <param id="0" name="Variable">attached</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="264624824252562" type="System">
+                    <param id="0" name="Variable">sitting</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="164261960030924" type="System">
+                    <param id="0" name="Variable">PAUSED</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="128351676547747" type="Player">
+                    <param id="0" name="X">charBehaviour.X</param>
+                    <param id="1" name="Y">charBehaviour.Y+35</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="655368269787539">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="738897758918847" type="System" />
+                <condition id="-14" name="Compare variable" sid="530018515940745" type="System">
+                    <param id="0" name="Variable">attached</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="173336448312864" type="System">
+                    <param id="0" name="Variable">sitting</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="948689615076024" type="System">
+                    <param id="0" name="Variable">PAUSED</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="396842559769470" type="Player">
+                    <param id="0" name="X">charBehaviour.X-300</param>
+                    <param id="1" name="Y">charBehaviour.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="593991758831673">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="321603870494618" type="System" />
+                <condition id="-14" name="Compare variable" sid="937742752320449" type="System">
+                    <param id="0" name="Variable">attached</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="379076585494224" type="System">
+                    <param id="0" name="Variable">sitting</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="575048764706284" type="System">
+                    <param id="0" name="Variable">PAUSED</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="962340446050248" type="Player">
+                    <param id="0" name="X">charBehaviour.X-300</param>
+                    <param id="1" name="Y">charBehaviour.Y+35</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="353416580199894">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="836168209330626" type="System" />
+                <condition id="-14" name="Compare variable" sid="388443067055388" type="System">
+                    <param id="0" name="Variable">attached</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="176561999584071" type="System">
+                    <param id="0" name="Variable">sitting</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="665956179482217" type="System">
+                    <param id="0" name="Variable">PAUSED</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="907040080952051" type="Player">
+                    <param id="0" name="X">charBehaviour.X+300</param>
+                    <param id="1" name="Y">charBehaviour.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="111890333353361">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="775290944800020" type="System" />
+                <condition id="-14" name="Compare variable" sid="282596741804441" type="System">
+                    <param id="0" name="Variable">attached</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="146468133436159" type="System">
+                    <param id="0" name="Variable">sitting</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="368716806738063" type="System">
+                    <param id="0" name="Variable">PAUSED</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="805034033665299" type="Player">
+                    <param id="0" name="X">charBehaviour.X+300</param>
+                    <param id="1" name="Y">charBehaviour.Y+35</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="871029192014607">
+            <conditions>
+                <condition id="3" name="On touched object" sid="555446334113214" type="Touch">
+                    <param id="0" name="Object">UpArrow</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="451125722292188" type="System">
+                    <param id="0" name="Variable">PAUSED</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="873129447206328" type="UpArrow">
+                    <param id="0" name="Animation">&quot;clicked&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="694847927455433" type="UpArrow">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Wait" sid="520601627708038" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="4" name="Set animation" sid="345735864064936" type="UpArrow">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="198428018633241" type="UpArrow">
+                    <param id="0" name="Opacity">50</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="520379966150199">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="685169366466814" type="System">
+                    <param id="0" name="Interval (seconds)">3</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="427213885920936" type="System">
+                    <param id="0" name="Variable">Start</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="361159545855350" type="System">
+                    <param id="0" name="Variable">mTimer</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="487763447705143" type="missionLoad2">
+                    <param id="0" name="Animation">&quot;P&quot; &amp; mTimer</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="376250437478380">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="209331235682846" type="System">
+                    <param id="0" name="Interval (seconds)">2</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="902303448296213" type="System">
+                    <param id="0" name="Variable">Start</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="346645542874019" type="System">
+                    <param id="0" name="Variable">IsEat</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="715202263689488" type="System">
+                    <param id="0" name="Variable">anim</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="795483998803805" type="progress2">
+                    <param id="0" name="Animation">&quot;D&quot; &amp; anim</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="856039604469886">
+            <conditions>
+                <condition id="2" name="Is playing" sid="999825290408670" type="missionLoad2">
+                    <param id="0" name="Animation">&quot;P20&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="692978537799133" type="System">
+                    <param id="0" name="Variable">isWin</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="177623175569649" type="System">
+                    <param id="0" name="Variable">GameOver</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="112555254525446" type="System">
+                    <param id="0" name="Variable">Start</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-24" name="Stop loop" sid="815897799936832" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="212356785116238">
+            <conditions>
+                <condition id="2" name="Is playing" sid="878280686750787" type="progress2">
+                    <param id="0" name="Animation">&quot;D0&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="377761834566586" type="System">
+                    <param id="0" name="Variable">isWin</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="829969819699020" type="System">
+                    <param id="0" name="Variable">GameOver</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="205529176008658" type="System">
+                    <param id="0" name="Variable">Start</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-24" name="Stop loop" sid="843803792114874" type="System" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
